@@ -9,6 +9,7 @@ header{
   position: sticky;
   top: 0px;
   background-color: rgb(70, 34, 47);
+  z-index: 999;
 }
 nav {
   display: flex;
@@ -16,7 +17,7 @@ nav {
   align-items: center;
   min-height: 8vh;
   font-family: sans-serif;
-  z-index: 2;
+  z-index: 999;
   position: relative;
 }
 .logo{
@@ -29,11 +30,11 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 30%;
-  z-index: 2;
+  z-index: 999;
 }
 .nav-links li{
   list-style: none;
-  z-index: 2;
+  z-index: 999;
 }
 .nav-links li a {
   color: white;
@@ -41,7 +42,7 @@ nav {
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
-  z-index: 2;
+  z-index: 999;
 }
 .burger{
   display: none;
@@ -123,6 +124,72 @@ section h2{
 .carousel-inner{
   z-index: 0;
 }
+.slider-box{
+  height: 350px;
+  width: 250px;
+  position: relative;
+  border-radius: 5px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.time{
+  position:absolute;
+  top: 0px;
+  right:20px;
+  color: black;
+}
+.detail{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  box-sizing:border-box;
+  font-size:13px;
+  line-height:35px;
+}
+.moreinfo{
+  position: absolute;
+  bottom: 0px;
+  height: 45px;
+  background-color: rgb(70, 34, 47);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.moreinfo:hover{
+  transform: scale(1.1);
+  background-color: lightcoral;
+  box-shadow: 2px 2px 12px rgba(47, 47, 47, 0.40);
+  transition: all ease 0.1s;
+}
+.price{
+  color: black;
+}
+.slider-box a{
+  text-decoration: none;
+  text-align: center;
+}
+.img-box{
+  height:270px;
+}
+.img-box img{
+  height: auto;
+  max-width: 100%;
+  max-height: 100%;
+}
+.slider-box:hover{
+  box-shadow: 2px 2px 12px rgba(47,47,47,0.40);
+}
+.slider-box:hover .img-box img{
+  transform: scale(1.07);
+  transition: all ease 0.3s;
+}
+.product-top img{
+  transform: scale(0.5, 0.5);
+}
 .home{
   background: linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
 }
@@ -131,6 +198,9 @@ section h2{
 }
 .about{
   background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
+}
+.swiper-slide{
+ width: 250px !important; 
 }
 .bubble{
   position: absolute;
