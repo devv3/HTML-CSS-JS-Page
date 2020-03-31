@@ -1,27 +1,36 @@
-TweenMax.defaultEase = Linear.easeOut;
+const sections = document.querySelectorAll("section");
+const bubble = document.querySelector(".bubble");
+const gradients = [
+  "linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%)",
+  "linear-gradient(to right top, #005c97, #363795)",
+  "linear-gradient(to right top, #e53935, #e35d5b)"
+];
+const options = {
+  threshold: 0.7
+};
+let observer = new IntersectionObserver(navCheck, options);
 
-new fullpage("#fullpage", {
-  //options here
-  autoScrolling: true,
-  navigation: true,
-  onLeave: (origin, destination, direction) => {
-    const section = destination.item;
-    const title = section.querySelector("h1");
-    const tl = new TimelineMax({ delay: 0.5 });
-    tl.fromTo(title, 0.5, { y: "50", opacity: 0 }, { y: "0", opacity: 1 });
-    if (destination.index === 1) {
-      const chairs = document.querySelectorAll(".chair");
-      const description = document.querySelector(".description");
-      tl.fromTo(chairs, 0.7, { x: "100%" }, { x: "-10%" })
-        .fromTo(
-          description,
-          0.5,
-          { opacity: 0, y: "50" },
-          { y: "0", opacity: 1 }
-        )
-        .fromTo(chairs[0], 1, { opacity: 1 }, { opacity: 1 })
-        .fromTo(chairs[1], 1, { opacity: 0 }, { opacity: 1 })
-        .fromTo(chairs[2], 1, { opacity: 0 }, { opacity: 1 });
+function navCheck(entries){
+  entries.forEach(entry => {
+    const className = entry.target.className;
+    const activeAnchor = document.querySelector(`[data-page=${className}]`);
+    const gradientIndex = entry.target.getAttribute('data-index');
+    const coords = activeAnchor.getBoundingClientRect();
+    const directions = {
+      height: coords.height,
+      width: coords.width,
+      top: coords.top,
+      left: coords.left
+    };
+    if(entry.isIntersecting){
+      bubble.style.setProperty("left", `${directions.left}px`);
+      bubble.style.setProperty("top", `${directions.top}px`);
+      bubble.style.setProperty("width", `${directions.width}px`);
+      bubble.style.setProperty("height", `${directions.height}px`);
+      bubble.style.background = gradients[gradientIndex];
     }
-  }
+  });
+}
+sections.forEach(section => {
+  observer.observe(section);
 });
