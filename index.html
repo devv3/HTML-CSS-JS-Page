@@ -6,8 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="swiper.min.css" />
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="OverlayScrollbars.min.js"></script>
+    <link type="text/css" href="OverlayScrollbars.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="swiper.min.css" />
   <link rel="stylesheet" href="css/style.css" />
     <title>SOLO PAGE</title>
   </head>
@@ -219,5 +221,12 @@
     <script src="mode.js"></script>
     <script src="swiper.min.js"></script>
     <script src="slider.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+    //The first argument are the elements to which the plugin shall be initialized
+    //The second argument has to be at least a empty object or a object with your desired options
+    OverlayScrollbars(document.querySelectorAll("body"), { });
+  });
+    </script>
   </body>
 </html>
