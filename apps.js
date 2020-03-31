@@ -2,8 +2,8 @@ const sections = document.querySelectorAll("section");
 const bubble = document.querySelector(".bubble");
 const gradients = [
   "linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%)",
-  "linear-gradient(to right top, #005c97, #363795)",
-  "linear-gradient(to right top, #e53935, #e35d5b)"
+  " linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%)",
+  "linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%)"
 ];
 const options = {
   threshold: 0.7

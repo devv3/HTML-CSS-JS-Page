@@ -16,6 +16,8 @@ nav {
   align-items: center;
   min-height: 8vh;
   font-family: sans-serif;
+  z-index: 2;
+  position: relative;
 }
 .logo{
   color: white;
@@ -27,10 +29,11 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 30%;
-
+  z-index: 2;
 }
 .nav-links li{
   list-style: none;
+  z-index: 2;
 }
 .nav-links li a {
   color: white;
@@ -38,6 +41,7 @@ nav {
   letter-spacing: 3px;
   font-weight: bold;
   font-size: 14px;
+  z-index: 2;
 }
 .burger{
   display: none;
@@ -59,7 +63,7 @@ section{
 }
 section h2{
   font-size: 5rem;
-  color: white;
+  color: black;
 }
 .bg{
   display: flex;
@@ -114,15 +118,19 @@ section h2{
 }
 .cover img{
   height: 60vh;
+  z-index: 0;
+}
+.carousel-inner{
+  z-index: 0;
 }
 .home{
   background: linear-gradient(135deg, rgba(226,226,226,1) 0%, rgba(219,219,219,1) 50%, rgba(209,209,209,1) 51%, rgba(254,254,254,1) 100%);
 }
 .products{
-  background: linear-gradient(to right top, #005c97, #363795);
+  background: linear-gradient(45deg, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
 }
 .about{
-  background: linear-gradient(to right top, #e53935, #e35d5b);
+  background: linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(246,246,246,1) 47%, rgba(237,237,237,1) 100%);
 }
 .bubble{
   position: absolute;
