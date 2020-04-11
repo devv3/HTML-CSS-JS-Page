@@ -38,11 +38,19 @@
           <div class="mini-cart-totals">
             <div id="total-price">
               <p>Total Price</p>
-              <span> $50.50 </span>
+              <span> $0 </span>
             </div>
             <div id="total-items">
               <p>Total Items</p>
-              <span> 10 </span>
+              <span> 0 </span>
+            </div>
+            <div id="vat">
+              <p>VAT</p>
+              <span> 21%</span>
+            </div>
+            <div id="shipping">
+              <p>SHIPPING</p>
+              <span> 5€</span>
             </div>
           </div>
         </div>
@@ -53,6 +61,33 @@
         <div class="line3"></div>
       </div>
     </nav>
+    <!--Modal: modalCoupon-->
+  <div class="modal fade top" id="modalCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true" data-backdrop="true">
+  <div class="modal-dialog modal-frame modal-top modal-notify modal-success" role="document">
+    <!--Content-->
+    <div class="modal-content">
+      <!--Body-->
+      <div class="modal-body">
+        <div class="row d-flex justify-content-center align-items-center">
+
+          <h2>
+            <span class="badge">v52gs1</span>
+          </h2>
+          <p class="pt-3 mx-4">We have a gift for you! Use this code to get a
+            <strong>10% discount</strong>.</p>
+
+          <a type="button" class="btn btn-success">Get it
+            <i class="fas fa-book ml-1 white-text"></i>
+          </a>
+          <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">No, thanks</a>
+        </div>
+      </div>
+    </div>
+    <!--/.Content-->
+  </div>
+</div>
+<!--Modal: modalCoupon-->
   </header>
   <main>
     <section data-index="0" class="home" id=home>
@@ -85,6 +120,7 @@
         </div>
       </div>
     </section>
+    
     <section data-index="1" class="products" id="products">
       <div class="swiper-container">
         <div class="swiper-wrapper">

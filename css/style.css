@@ -255,6 +255,7 @@ section h2{
   border: 2px white;
 }
 .mini-cart {
+  margin-bottom: 25px;
   float: right;
 }
 
@@ -279,7 +280,7 @@ section h2{
   min-height: 200px;
   position: absolute;
   width: 50%;
-  max-width: 400px;
+  max-width: 600px;
   display: none;
   background: white;
   box-shadow: 0px 10px 50px -5px rgb(199, 199, 199);
@@ -346,18 +347,34 @@ section h2{
   margin-right: 20px;
 }
 
-#total-items p,
+#total-items p, #vat #shipping, 
 #total-price p {
   font-weight: 700;
   color: grey;
   margin-bottom: 0;
 }
 
-#total-items span,
+#total-items span, #vat span #shipping span,
 #total-price span {
   font-size: 16px;
   font-weight: 700;
   color: grey;
+}
+#vat {
+  float: left;
+  padding: 5px;
+  border: 1px solid grey;
+  margin: 10px;
+  min-width: 100px;
+  margin-left: 20px;
+}
+#shipping {
+  float: left;
+  padding: 5px;
+  border: 1px solid grey;
+  margin: 10px;
+  min-width: 100px;
+  margin-left: 20px;
 }
 
 .succes-message {

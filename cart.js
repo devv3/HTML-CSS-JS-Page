@@ -36,11 +36,15 @@ function commaSeparateNumber(val){
       }else{ 
           $('.mini-cart-items ul').append('<li id="'+val+'">'+'<h3>'+productName+'<br/>'+'<span class="item-prices" id="price_'+val+'">'+price+'<span>'+'</h3>'+'<span class="item-quantities" id="qty_'+val+'">'+qty+'</span>'+'</li>');
       };
-  
       var totalPrice = 0.0;
+      var vat = 21;
+      var shipping = 5;
+      var coupon = 20;
       $(".item-prices").each(function()
       {
           totalPrice += parseFloat($(this).text());
+          totalPrice += totalPrice%vat;
+          totalPrice += shipping;
       });
       $('div#total-price > span').text(commaSeparateNumber(totalPrice.toFixed(2)));
       
