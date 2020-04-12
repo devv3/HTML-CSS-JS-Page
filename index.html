@@ -9,6 +9,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="OverlayScrollbars.min.js"></script>
+  <script src="lang.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link type="text/css" href="OverlayScrollbars.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="swiper.min.css" />
@@ -19,28 +20,36 @@
 <body>
   <header>
     <nav>
-      <div class="logo">
+      <div class="dropdown">
+        <button class="dropbtn" key='language'>Language</button>
+        <div class="dropdown-content">
+          <a class="dropdown-item" key="en" id="en"><span class="flag-icon flag-icon-gb"></span>English</a>
+          <a class="dropdown-item" key="lt" id="lt"><span class="flag-icon flag-icon-lt"></span>Lithuanian</a>
+        </div>
+      </div>>
+      <div class="logo" key="page">
         <h4>PAGE</h4>
       </div>
       <ul class="nav-links">
-        <li><a data-page="home" href="#home">Home</a></li>
-        <li><a data-page="products" href="#products">Products</a></li>
-        <li><a data-page="about" href="#about">About</a></li>
+        <li><a class="nav-link" data-page="home" href="#home" key="home">Home</a></li>
+        <li><a class="nav-link" data-page="products" href="#products" key="products">Products</a></li>
+        <li><a class="nav-link" data-page="about" href="#about" key="about">About</a></li>
         <div class="bubble"></div>
       </ul>
       <div class="mini-cart">
-        <button class="btn btn-default mini-cart-button"><span class="glyphicon glyphicon-shopping-cart"></span></button>
+        <button class="btn btn-default mini-cart-button"><span
+            class="glyphicon glyphicon-shopping-cart"></span></button>
       </div>
       <div class="mini-cart-container">
         <div class="mini-cart-items">
           <ul>
           </ul>
           <div class="mini-cart-totals">
-            <div id="total-price">
+            <div id="total-price" key="total-price">
               <p>Total Price</p>
               <span> $0 </span>
             </div>
-            <div id="total-items">
+            <div id="total-items" key="total-items"> 
               <p>Total Items</p>
               <span> 0 </span>
             </div>
@@ -48,7 +57,7 @@
               <p>VAT</p>
               <span> 21%</span>
             </div>
-            <div id="shipping">
+            <div id="shipping" key="shipping">
               <p>SHIPPING</p>
               <span> 5€</span>
             </div>
@@ -61,41 +70,14 @@
         <div class="line3"></div>
       </div>
     </nav>
-    <!--Modal: modalCoupon-->
-  <div class="modal fade top" id="modalCoupon" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-  aria-hidden="true" data-backdrop="true">
-  <div class="modal-dialog modal-frame modal-top modal-notify modal-success" role="document">
-    <!--Content-->
-    <div class="modal-content">
-      <!--Body-->
-      <div class="modal-body">
-        <div class="row d-flex justify-content-center align-items-center">
-
-          <h2>
-            <span class="badge">v52gs1</span>
-          </h2>
-          <p class="pt-3 mx-4">We have a gift for you! Use this code to get a
-            <strong>10% discount</strong>.</p>
-
-          <a type="button" class="btn btn-success">Get it
-            <i class="fas fa-book ml-1 white-text"></i>
-          </a>
-          <a type="button" class="btn btn-outline-success waves-effect" data-dismiss="modal">No, thanks</a>
-        </div>
-      </div>
-    </div>
-    <!--/.Content-->
-  </div>
-</div>
-<!--Modal: modalCoupon-->
   </header>
   <main>
     <section data-index="0" class="home" id=home>
       <div class="bg">
         <div class="introduction">
           <div class="intro-text">
-            <h1>Gaming Computers</h1>
-            <p>High Performance, Killer Looks!</p>
+            <h1><span style="display:block; " key='h1'> Gaming Computers</span></h1>
+            <p><span style="display:block; " key='p1'>High Performance, Killer Looks! </span></p>
           </div>
         </div>
         <div class="cover">
@@ -120,7 +102,7 @@
         </div>
       </div>
     </section>
-    
+
     <section data-index="1" class="products" id="products">
       <div class="swiper-container">
         <div class="swiper-wrapper">
@@ -132,7 +114,7 @@
               <p class="detail">GAMER ULTRA NAVI
                 <a href="#" class="price">1099,99 €</a></p>
               <div class="moreinfo">
-                <a href="/modal/modal1.html" class='li-modal1'>More Information</a>
+                <a href="/modal/modal1.html" class='li-modal1' key="moreinfo">More Information</a>
               </div>
             </div>
           </div>
@@ -144,7 +126,7 @@
               <p class="detail">GAMER ESSENTIAL ESPORTS
                 <a href="#" class="price">899,99 €</a></p>
               <div class="moreinfo">
-                <a href="/modal/modal2.html" class='li-modal2'>More Information</a>
+                <a href="/modal/modal2.html" class='li-modal2' key="moreinfo">More Information</a>
               </div>
             </div>
           </div>
@@ -156,7 +138,7 @@
               <p class="detail">SYBER M PRO 200
                 <a href="#" class="price">1199,99 €</a></p>
               <div class="moreinfo">
-                <a href='/modal/modal3.html' class='li-modal3'>More Information</a>
+                <a href='/modal/modal3.html' class='li-modal3' key="moreinfo">More Information</a>
               </div>
             </div>
           </div>
@@ -168,7 +150,7 @@
               <p class="detail">GAMER INFINITY 8000
                 <a href="#" class="price">1399,99 €</a></p>
               <div class="moreinfo">
-                <a href='/modal/modal4.html' class='li-modal4'>More Information</a>
+                <a href='/modal/modal4.html' class='li-modal4' key="moreinfo">More Information</a>
               </div>
             </div>
           </div>
@@ -178,9 +160,9 @@
                 <img src="img/gamingpc5.png">
               </div>
               <p class="detail">VR READY DEAL RX 5700 XT
-                <a href="#" class="price">Price 1000€</a></p>
+                <a href="#" class="price">1000€</a></p>
               <div class="moreinfo">
-                <a href='/modal/modal5.html' class='li-modal5'>More Information</a>
+                <a href='/modal/modal5.html' class='li-modal5' key="moreinfo">More Information</a>
               </div>
             </div>
           </div>
@@ -190,19 +172,42 @@
                 <img src="img/gamingpc6.png">
               </div>
               <p class="detail">GAMER INFINITY XLC
-                <a href="#" class="price">Price 1000€</a></p>
+                <a href="#" class="price">1000€</a></p>
               <div class="moreinfo">
-                <a href='/modal/modal6.html' class='li-modal6'>More Information</a>
+                <a href='/modal/modal6.html' class='li-modal6' key="moreinfo">More Information</a>
               </div>
-            </div>
-          </div>
             </div>
           </div>
         </div>
       </div>
+      </div>
+      </div>
     </section>
     <section data-index="2" class="about" id="about">
-      <h2>About</h2>
+      <div class="container h-100" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-delay="50" >
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <link
+              href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+              rel="stylesheet">
+            <div class="card member-box shadow-lg">
+              <span class="shape"></span>
+              <img class="card-img-top" src="/img/Coding-Geospatial.jpg" alt="">
+              <div class="card-body">
+                <h4 class="member-title" key="xz">Martynas <br>
+                <small key="email"><strong>Email: </strong>m.buivydas@stud.vgtu.lt</small> <br>
+                <small key="location"><strong>Location: </strong> Vilnius</small>
+                <small key="university"><strong>University: </strong> VGTU</small></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="video" data-aos="fade" data-aos-easing="ease-in-out" data-aos-delay="50">
+        <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+          <source src="img/coverr-aerial-view-of-golden-gate-bridge-1585728910852.mp4" type="video/mp4">
+        </video>
+      </div>
     </section>
   </main>
   <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -220,33 +225,34 @@
     </div>
   </div>
   <div class="modal fade" id="modal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-  aria-hidden="true">
-  <div class="modal-dialog modal-lg" role="document">
-    <div class="modal-content">
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+      </div>
     </div>
   </div>
-</div>
-<div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document">
-  <div class="modal-content">
+  <div class="modal fade" id="modal4" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+      </div>
+    </div>
   </div>
-</div>
-</div>
-<div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document">
-  <div class="modal-content">
+  <div class="modal fade" id="modal5" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+      </div>
+    </div>
   </div>
-</div>
-</div>
-<div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-aria-hidden="true">
-<div class="modal-dialog modal-lg" role="document">
-  <div class="modal-content">
+  <div class="modal fade" id="modal6" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+      <div class="modal-content">
+      </div>
+    </div>
   </div>
-</div>
-</div>
+  <script src="cart.js"></script>
   <script src="app.js"></script>
   <script src="apps.js"></script>
   <script src="mode.js"></script>
@@ -254,7 +260,7 @@ aria-hidden="true">
   <script src="slider.js"></script>
   <script src="productinfo.js"></script>
   <script src="modal.js"></script>
-  <script src="cart.js"></script>
+  <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init({
@@ -262,6 +268,10 @@ aria-hidden="true">
       delay: 0, // values from 0 to 3000, with step 50ms
       duration: 1000 // values from 0 to 3000, with step 50ms
     });
+
+  </script>
+  <script>
+    ScrollReveal().reveal('.video'), { delay: 2000 };
   </script>
 </body>
 
