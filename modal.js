@@ -22,3 +22,7 @@ $('.li-modal1').on('click', function(e){
     e.preventDefault();
     $('#modal6').modal('show').find('.modal-content').load($(this).attr('href'));
   });
+  $('.checkout').on('click', function(e){
+    e.preventDefault();
+    $('#checkout').modal('show').find('.modal-content').load($(this).attr('href'));
+  });

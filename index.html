@@ -6,15 +6,18 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="OverlayScrollbars.min.js"></script>
+  <link rel="shortcut icon" href="img/cs.png">
   <script src="lang.js"></script>
+  <script src="cart.js"></script>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link type="text/css" href="OverlayScrollbars.min.css" rel="stylesheet" />
   <link rel="stylesheet" href="swiper.min.css" />
   <link rel="stylesheet" href="css/style.css" />
-  <title>SOLO PAGE</title>
+  <title>COMPUTER STORE</title>
 </head>
 
 <body>
@@ -27,11 +30,12 @@
           <a class="dropdown-item" key="lt" id="lt"><span class="flag-icon flag-icon-lt"></span>Lithuanian</a>
         </div>
       </div>>
-      <div class="logo" key="page">
-        <h4>PAGE</h4>
+      <div class="logo" key="page" data-aos="fade-down">
+        <h4>COMPUTER STORE</h4>
       </div>
       <ul class="nav-links">
         <li><a class="nav-link" data-page="home" href="#home" key="home">Home</a></li>
+        <li><a class="nav-link" data-page="quality" href="#quality" key="quality">QUALITY</a></li>
         <li><a class="nav-link" data-page="products" href="#products" key="products">Products</a></li>
         <li><a class="nav-link" data-page="about" href="#about" key="about">About</a></li>
         <div class="bubble"></div>
@@ -64,14 +68,10 @@
           </div>
         </div>
       </div>
-      <div class="burger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
-      </div>
     </nav>
   </header>
   <main>
+    <div class='top'></div>
     <section data-index="0" class="home" id=home>
       <div class="bg">
         <div class="introduction">
@@ -91,19 +91,40 @@
             <!-- Wrapper for slides -->
             <div class="carousel-inner">
               <div class="item active">
-                <img src="/img/gamingpc1.png" alt="Los Angeles" style="width:100%;">
+                <img src="img/gamingpc1.png" style="width:100%;">
               </div>
 
               <div class="item">
-                <img src="/img/gamingpc2.png" alt="Chicago" style="width:100%;">
+                <img src="img/gamingpc2.png" style="width:100%;">
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <section data-index="1" class="products" id="products">
+    <section data-index="1" class="quality" id=quality>
+      <div class="container">
+        <div class="post-container" data-aos="fade-right">
+          <div class="post-thumb"><img src="img/performance.png" /></div>
+          <div class="post-content">
+            <div class="post-title">
+              <h3><span style="display:block; " key='h3'> Maximized Performance</span></h3>
+            </div>
+            <p3><span style="display:block; " key='p3'>Every Computer is expertly crafted to maximize every bit of power in your system. </br> Rigorously tested for up to 72 hours, we ensure that your PC is functioning at its absolute maximum for years of hard core usage.</span></p3>
+          </div>
+        </div>
+        <div class="post-container1" data-aos="fade-left">
+          <div class="post-thumb1"><img src="img/warranty.png" /></div>
+          <div class="post-content">
+            <div class="post-title">
+              <h4><span style="display:block; " key='h4'>Built Tough</span></h4>
+            </div>
+            <p4><span style="display:block; " key='p4'>We stand behind our gaming computers with an unrivaled, 5-year labor 3-year parts Warranty at no additional charge, on desktops only. </br> We firmly believe in the quality and longevity of our PCs. With our 5-year warranty, you will too.</span></p4>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section data-index="2" class="products" id="products">
       <div class="swiper-container">
         <div class="swiper-wrapper">
           <div class="swiper-slide">
@@ -183,7 +204,7 @@
       </div>
       </div>
     </section>
-    <section data-index="2" class="about" id="about">
+    <section data-index="3" class="about" id="about">
       <div class="container h-100" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-delay="50" >
         <div class="d-flex h-100 text-center align-items-center">
           <div class="w-100 text-white">
@@ -192,12 +213,31 @@
               rel="stylesheet">
             <div class="card member-box shadow-lg">
               <span class="shape"></span>
-              <img class="card-img-top" src="/img/Coding-Geospatial.jpg" alt="">
+              <img class="card-img-top" src="img/gamingshop.png" alt="">
+              <div class="card-body">
+                <h4 class="member-title" key="xz">COMPUTER STORE <br>
+                <small key="email"><strong></strong>c.store@gmail.com</small> <br>
+                <small key="location"><strong> </strong> Vilnius</small>
+                <small key="university"><strong></strong> 2020</small></h4>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container h-100" data-aos="fade-right" data-aos-easing="ease-in-out" data-aos-delay="50" >
+        <div class="d-flex h-100 text-center align-items-center">
+          <div class="w-100 text-white">
+            <link
+              href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap"
+              rel="stylesheet">
+            <div class="card member-box shadow-lg">
+              <span class="shape"></span>
+              <img class="card-img-top" src="img/Coding-Geospatial.jpg" alt="">
               <div class="card-body">
                 <h4 class="member-title" key="xz">Martynas <br>
-                <small key="email"><strong>Email: </strong>m.buivydas@stud.vgtu.lt</small> <br>
-                <small key="location"><strong>Location: </strong> Vilnius</small>
-                <small key="university"><strong>University: </strong> VGTU</small></h4>
+                <small key="email"><strong></strong>m.buiydas@stud.vgtu.lt</small> <br>
+                <small key="location"><strong> </strong> Vilnius</small>
+                <small key="university"><strong></strong> VGTU</small></h4>
               </div>
             </div>
           </div>
@@ -205,7 +245,7 @@
       </div>
       <div class="video" data-aos="fade" data-aos-easing="ease-in-out" data-aos-delay="50">
         <video playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
-          <source src="img/coverr-aerial-view-of-golden-gate-bridge-1585728910852.mp4" type="video/mp4">
+          <source src="/img/coverr-aerial-view-of-golden-gate-bridge-1585728910852.mp4" type="video/mp4">
         </video>
       </div>
     </section>
@@ -252,14 +292,14 @@
       </div>
     </div>
   </div>
-  <script src="cart.js"></script>
+  </div>
   <script src="app.js"></script>
   <script src="apps.js"></script>
-  <script src="mode.js"></script>
   <script src="swiper.min.js"></script>
   <script src="slider.js"></script>
   <script src="productinfo.js"></script>
   <script src="modal.js"></script>
+  <script src="scroll.js"></script>
   <script src="https://unpkg.com/scrollreveal"></script>
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
@@ -274,5 +314,17 @@
     ScrollReveal().reveal('.video'), { delay: 2000 };
   </script>
 </body>
-
+<footer class="site-footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8 col-sm-6 col-xs-12">  
+        <p class="copyright-text" key="copyright">Copyright &copy; 2020  Computer Store -  
+     <a href="#">Terms of Service</a> - <a href="#">Return Policy </a>.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class='scrolltop'>
+    <div class='scroll icon'><i class="fas fa-angle-double-up" aria-hidden="true"></i></div>
+</footer>
 </html>
