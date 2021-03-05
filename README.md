@@ -1,4 +1,3 @@
-# IT-Laboratorinis
-Individualus puslapis
+# University course of HTML/CSS/JS
+Page with html/css and js for not existing computer parts shop
 
-live versija: https://laboratorinisit.000webhostapp.com/
